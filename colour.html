@@ -1,0 +1,30 @@
+<html>
+<head>
+  <script>
+  // Google AI prompt: write a javascript to change background color of a webpage cycling through rgb
+  // recreation of a script originally written in 2000/2001
+
+  let r = 0;
+  let g = 85;
+  let b = 170;
+
+  function cycleRGB() {
+    // Increment color values and wrap around using modulo 256
+    r = (r + 1) % 256;
+    g = (g + 2) % 256;
+    b = (b + 3) % 256;
+
+    // Apply the new RGB color to the body background
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  }
+
+  // Run the function every 50 milliseconds for a smooth transition
+  const colorInterval = setInterval(cycleRGB, 10);
+
+  // To stop the cycling later, you can call: clearInterval(colorInterval);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
